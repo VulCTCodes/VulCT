@@ -9,7 +9,7 @@ from functools import partial
 from PIL import Image
 
 
-C_LANGUAGE = Language('/home/data4T2/swq/VulCT/parse/my-languages.so', 'c')
+C_LANGUAGE = Language('/VulCT/parse/my-languages.so', 'c')
 # JAVA_LANGUAGE = Language('/home/data4T2/swq/Main/parse/my-languages.so', 'java')
 # PY_LANGUAGE = Language('/home/data4T2/swq/Main/parse/my-languages.so', 'python')
 parser = Parser()
@@ -295,36 +295,7 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()  
-    file = '/home/data4T2/swq/VulCT/code/example.c'
-    # ast = get_ast(file)
-    # edges = get_edges(ast, 'faast')
-
-
-    get_matrix('/home/data4T2/swq/VulCT/code/example.c','/home/data4T2/swq/VulCT/code/', 'faast')
-
-
-
-   
-
-# input_dir = '../data/sard/*/*.c'
-# files = glob.glob(input_dir)
-# for file in files:
-#     programfile = open(file, encoding='utf-8')
-#     programtext = bytes(programfile.read(), "utf8")
-
-#     tree = parser.parse(programtext)
-#     root_node = tree.root_node
-#     nodelist = []
-#     newtree = AnyNode(id=0, token=None, data=None)
-#     createtree(newtree, root_node, nodelist)
-    
-
-# path = '/home/data4T2/swq/Main/code/example.c'
-# ast = get_ast(path)
-# edges = get_faast_edges(ast)
-# matrix = get_matrix(edges)
-# # print(edges)
+    main()  
 
 
 
