@@ -3,6 +3,8 @@ VulCT is a fast and accurate large-scale vulnerability detection system.
 To ensure the accuracy of detection, we extend the AST by adding extra information to generate the Enhanced-AST and transform it into a straightforward state matrix using Markov chains. 
 Subsequently, we convert the generated state matrix into a grayscale image and classify the image based on the traditional CNN model. 
 
+
+
 VulCT is divided into three phases: Static Analysis, Image Generation, and Classification.
 
 1. Static Analysis: 
@@ -18,6 +20,8 @@ VulCT is divided into three phases: Static Analysis, Image Generation, and Class
   The input to this step is a gray image and the output reports the detection result.
 
 The source code and dataset of Amain are published here.
+
+
 
 # Project Structure  
   
