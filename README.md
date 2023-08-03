@@ -1,10 +1,9 @@
 # VulCT: Scalable Vulnerability Detection by Enhanced Tree Analysis
-VulCT is a fast and accurate large-scale vulnerability detection system. 
-To ensure the accuracy of detection, we extend the AST by adding extra information to generate the Enhanced-AST and transform it into a straightforward state matrix using Markov chains. 
-Subsequently, we convert the generated state matrix into a grayscale image and classify the image based on the traditional CNN model. 
+In recent years, with the increasing scale and complexity of software, traditional vulnerability detection methods are difficulty meeting the growing demand, and vulnerability detection is gradually advancing toward automation and intelligence. Numerous deep learning-based methods for detecting vulnerabilities have been proposed, which can achieve relatively satisfactory results in real datasets. However, these methods face difficulties in ensuring both efficiency and accuracy of vulnerability detection simultaneously and cannot be applied to large-scale real software. 
 
+In this paper, we propose a novel enhanced tree-based vulnerability detection method, VulCT, which enables fast detection while preserving semantic features. We enrich the AST with data flow and control flow information, preserving the syntactic and semantic details of the program. Additionally, we introduce Markov chains to represent the AST in a simpler manner while maintaining its structural information. To examine the effectiveness of VulCT, we evaluate it on two widely used datasets namely FFmpeg+Qemu and Reveal. Experimental results indicate that VulCT is superior to seven state-of-the-art vulnerability detection tools (i.e., TokenCNN, VulDeePecker, SySeVR, ASTGRU, CodeBERT, Devign, and VulCNN). In terms of scalability, VuCT is ten times faster than VulCNN and 68 times faster than Devign.
 
-
+# Design of VulCT
 VulCT is divided into three phases: Static Analysis, Image Generation, and Classification.
 
 1. Static Analysis: 
@@ -21,16 +20,10 @@ VulCT is divided into three phases: Static Analysis, Image Generation, and Class
 
 The source code and dataset of Amain are published here.
 
+# Dataset
 
 
-# Project Structure  
-  
-```shell  
-VulCT 
-|-- ImageGeneration.py     	       // implement the first two phases:  Static Analysis and Image Generation 
-|-- Classification_models.py       // implement the Classification phase  
-```
-
+# Source Code  
 ### ImageGeneration.py
 - Input: dataset with source codes
 - Output: gray images 
