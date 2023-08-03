@@ -23,7 +23,7 @@ The source code and dataset of Amain are published here.
   
 ```shell  
 VulCT 
-|-- ImageGeneration.py     	// implement the first two phases:  Static Analysis and Image Generation 
+|-- ImageGeneration.py     	       // implement the first two phases:  Static Analysis and Image Generation 
 |-- Classification_models.py       // implement the Classification phase  
 ```
 
