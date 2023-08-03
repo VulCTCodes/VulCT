@@ -28,21 +28,24 @@ For each dataset, we randomly divide it in the ratio of 8:1:1 to generate disjoi
 # Source Code  
 ## Step 1: Language library build
 Build a C Parser Library for Tree-sitter (We implement Tree-sitter for static analysis generates AST.)
+Refer to [Tree-sitter](https://tree-sitter.github.io/tree-sitter/)
 ```
 cd parse
 bash build.sh
 ```
 
 ## Step2: ImageGeneration
+Implementation of static analysis and image generation steps
 - Input: dataset with source codes
 - Output: gray images 
 ```
-python ImageGeneration.py -i 
+python ImageGeneration.py -i ../data/sard -o ../images/sard -t faast
 ```
 
-### Classification_models.py
+### Step3: Classification
+Implementing multiple CNN models to classify grayscale images
 - Input: gray images of dataset
 - Output: recall, precision, and F1 scores of CNN models
 ```
-python Classification_models.py
+python Classification.py -i ../images -o ../result -t sard -m densenet
 ```
