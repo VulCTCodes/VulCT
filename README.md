@@ -33,7 +33,7 @@ cd parse
 bash build.sh
 ```
 
-### ImageGeneration.py
+## Step2: ImageGeneration
 - Input: dataset with source codes
 - Output: gray images 
 ```
