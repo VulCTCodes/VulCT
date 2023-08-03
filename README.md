@@ -4,6 +4,7 @@ In recent years, with the increasing scale and complexity of software, tradition
 In this paper, we propose a novel enhanced tree-based vulnerability detection method, VulCT, which enables fast detection while preserving semantic features. We enrich the AST with data flow and control flow information, preserving the syntactic and semantic details of the program. Additionally, we introduce Markov chains to represent the AST in a simpler manner while maintaining its structural information. To examine the effectiveness of VulCT, we evaluate it on two widely used datasets namely FFmpeg+Qemu and Reveal. Experimental results indicate that VulCT is superior to seven state-of-the-art vulnerability detection tools (i.e., TokenCNN, VulDeePecker, SySeVR, ASTGRU, CodeBERT, Devign, and VulCNN). In terms of scalability, VuCT is ten times faster than VulCNN and 68 times faster than Devign.
 
 # Design of VulCT
+ <img src="System.png" width = "800" height = "300" alt="图片名称" align=center />
 VulCT is divided into three phases: Static Analysis, Image Generation, and Classification.
 
 1. Static Analysis: 
