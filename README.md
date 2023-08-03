@@ -16,7 +16,7 @@ VulCT is divided into three phases: Static Analysis, Image Generation, and Class
   The input to this step is a gray image and the output reports the detection result.
 
 # Dataset
-We choose two datasets FFMPeg+Qemu and Reveal obtained from the real world as the experimental datasets to evaluate the performance of \emph{VulCT}. 
+We choose two datasets FFMPeg+Qemu and Reveal obtained from the real world as the experimental datasets to evaluate the performance of VulCT. 
 The dataset FFMPeg+Qemu provided by Devign is a balanced dataset obtained from the two open-source projects FFMPeg and Qemu, including about 12k vulnerable functions and 14k non-vulnerable functions. 
 The ReVeal dataset proposed by ReVeal is an unbalanced dataset collected from two open-source projects Chrome and Debian. 
 It consists of about 2k vulnerable functions and 20k non-vulnerable functions. 
@@ -26,6 +26,12 @@ These vulnerability samples come from multiple sources and cover a wide range of
 For each dataset, we randomly divide it in the ratio of 8:1:1 to generate disjoint training, validation and test sets. 
 
 # Source Code  
+## Step 1: Language library build
+Build a C Parser Library for Tree-sitter (We implement Tree-sitter for static analysis generates AST.)
+```
+cd parse
+bash build.sh
+```
 
 ### ImageGeneration.py
 - Input: dataset with source codes
